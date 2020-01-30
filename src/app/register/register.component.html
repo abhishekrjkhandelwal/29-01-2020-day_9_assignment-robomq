@@ -1,0 +1,22 @@
+<form [formGroup]="registerForm" (ngSubmit) = "onSubmit()">
+  Name: <input type="text" placeholder="Name" name="name" formControlName ="name" required>
+  <p *ngIf="registerForm.controls.name.errors?.required"  >Name is Required</p>
+  <p *ngIf="registerForm.controls.name.errors?.pattern">name is not valid</p><br>
+
+  Email: <input type="text" placeholder="Email" name="email" formControlName ="email" required>
+  <p *ngIf="registerForm.controls.email.errors?.required">Email is Required</p>
+  <p *ngIf="registerForm.controls.email.errors?.pattern">email is not valid</p><br>
+
+  Password: <input type="password" placeholder="Password" name="password" formControlName ="password" required>
+  <p *ngIf="registerForm.controls.email.errors?.required">Password is Required</p>
+  <p *ngIf="registerForm.controls.password.errors?.pattern">password is not valid</p><br>
+
+  Mobile No: <input type="number" placeholder="Mobile No" name="mobileno" formControlName ="mobileno" required>
+  <p *ngIf="registerForm.controls.email.errors?.required">Mobile No is Required</p>
+  <p *ngIf="registerForm.controls.mobileno.errors?.pattern">mobile no is not valid</p><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+
+

@@ -1,0 +1,16 @@
+<a [routerLink]="'/regsiter'">Regsiter</a>
+
+<form [formGroup]="loginForm" (ngSubmit) = "onSubmit()">
+
+  <table cellspacing="0">
+  <tr>
+    <td>
+      <input placeholder="Username" formControlName="email" required>
+      <p *ngIf="loginForm.controls.email.errors?.required">Email is Required</p>
+      <input placeholder="Password" formControlName="password" required>
+     <p *ngIf="loginForm.controls.password.errors?.required">Password is Required</p>
+    </td>
+  </tr>
+  <button (ngSubmit) = "onSubmit()">Submit</button>
+  </table>
+</form>
